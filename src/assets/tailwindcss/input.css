@@ -1,0 +1,4 @@
+/* tailwindcss入口解析文件 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
