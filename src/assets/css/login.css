@@ -1,0 +1,161 @@
+.animate-blockleftmin {
+   animation-name: blockinleftmin;
+}
+.animate-blockleftmed {
+   animation-name: blockinleftmed;
+}
+.animate-blockleftmax {
+   animation-name: blockinleftmax;
+}
+.animate-inleft {
+   animation-name: iteminleft;
+}
+.animate-d-5 {
+   animation-duration: 0.5s;
+}
+.animate-d-6 {
+   animation-duration: 0.6s;
+}
+.animate-d-7 {
+   animation-duration: 0.7s;
+}
+.animate-d-8 {
+   animation-duration: 0.8s;
+}
+.animate-d-9 {
+   animation-duration: 0.9s;
+}
+.animate-d-10 {
+   animation-duration: 1s;
+}
+@keyframes blockinleftmin {
+   from {
+      transform: translateX(10px);
+      opacity: 0;
+   }
+   to {
+      transform: translateX(0px);
+      opacity: 1;
+   }
+}
+@keyframes blockinleftmed {
+   from {
+      transform: translateX(30px);
+      opacity: 0;
+   }
+   to {
+      transform: translateX(0px);
+      opacity: 1;
+   }
+}
+@keyframes blockinleftmax {
+   from {
+      transform: translateX(50px);
+      opacity: 0;
+   }
+   to {
+      transform: translateX(0px);
+      opacity: 1;
+   }
+}
+@keyframes iteminleft {
+   0% {
+      right: -50px;
+      opacity: 0;
+   }
+
+   80% {
+      right: 0px;
+      opacity: 0.7;
+   }
+   100% {
+      /* left: 100%; */
+      opacity: 1;
+   }
+}
+.fontsize-15 {
+   font-size: 15px;
+}
+.fontsize-25 {
+   font-size: 25px;
+}
+.margintop-5 {
+   margin-top: 5px;
+}
+.margintop-10 {
+   margin-top: 10px;
+}
+.margintop-15 {
+   margin-top: 15px;
+}
+.margintop-20 {
+   margin-top: 20px;
+}
+.margintop-25 {
+   margin-top: 25px;
+}
+.margintop-30 {
+   margin-top: 30px;
+}
+.marginleft-5 {
+   margin-left: 5px;
+}
+.marginleft-10 {
+   margin-left: 10px;
+}
+.marginleft-15 {
+   margin-left: 15px;
+}
+.marginleft-20 {
+   margin-left: 20px;
+}
+.marginleft-25 {
+   margin-left: 25px;
+}
+.marginleft-30 {
+   margin-left: 30px;
+}
+.marginright-5 {
+   margin-right: 5px;
+}
+.marginright-10 {
+   margin-right: 10px;
+}
+.marginright-15 {
+   margin-right: 15px;
+}
+.marginright-20 {
+   margin-right: 20px;
+}
+
+.marginright-25 {
+   margin-right: 25px;
+}
+.marginright-30 {
+   margin-right: 30px;
+}
+.font-bold-25 {
+   font-size: 25px;
+   font-weight: 700;
+}
+.align-items-center {
+   align-items: center; /* 垂直居中 */
+}
+.border-1 {
+   border-width: 1px;
+}
+.hover-pointer-color:hover {
+   cursor: pointer;
+   background-color: rgb(243, 238, 238);
+}
+.more-action {
+   color: #8dc6f2;
+}
+.more-action:hover {
+   cursor: pointer;
+   color: #038bf4;
+}
+.enter-y {
+   animation-name: blockinleftmed;
+   animation-duration: 0.5s;
+}

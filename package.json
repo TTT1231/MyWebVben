@@ -13,8 +13,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
     "ant-design-vue": "^4.2.3",
     "axios": "^1.7.3",
+    "echarts": "^5.5.1",
     "element-plus": "^2.7.8",
     "mockjs": "^1.1.0",
     "vite-plugin-mock": "^3.0.2",

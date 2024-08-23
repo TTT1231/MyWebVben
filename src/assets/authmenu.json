@@ -1,0 +1,182 @@
+{
+   "status": 200,
+   "message": "成功",
+   "data": [
+      {
+         "_id": 1,
+         "user_id": 1,
+         "menuname": "Dashbord",
+         "menutype": "tree",
+         "parent_id": -1,
+         "iconpath": "menu",
+         "path": "",
+         "childrens": [
+            {
+               "_id": 2,
+               "userid": 1,
+               "menuname": "分析页",
+               "menutype": "node",
+               "parent_id": 1,
+               "iconpath": "",
+               "path": "/main/analysis",
+               "childrens": []
+            },
+            {
+               "_id": 3,
+               "userid": 1,
+               "menuname": "工作台",
+               "menutype": "node",
+               "parent_id": 1,
+               "path": "/main/workbench",
+               "iconpath": "",
+               "childrens": []
+            }
+         ]
+      },
+      {
+         "_id": 4,
+         "user_id": 1,
+         "menuname": "权限管理",
+         "menutype": "tree",
+         "parent_id": -1,
+         "path": "q4",
+         "iconpath": "gongneng",
+         "childrens": [
+            {
+               "_id": 5,
+               "userid": 1,
+               "menuname": "基于前端权限",
+               "menutype": "tree",
+               "parent_id": 4,
+               "path": "q5",
+               "iconpath": "",
+               "childrens": [
+                  {
+                     "_id": 6,
+                     "user_id": 1,
+                     "menuname": "页面权限",
+                     "menutype": "node",
+                     "parent_id": 5,
+                     "iconpath": "",
+                     "path": "",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 7,
+                     "user_id": 1,
+                     "menuname": "按钮权限",
+                     "menutype": "node",
+                     "parent_id": 5,
+                     "iconpath": "",
+                     "path": "",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 8,
+                     "user_id": 1,
+                     "menuname": "权限测试页",
+                     "menutype": "node",
+                     "parent_id": 5,
+                     "iconpath": "",
+                     "path": "",
+                     "childrens": []
+                  }
+               ]
+            },
+            {
+               "_id": 9,
+               "user_id": 1,
+               "menuname": " 基于后端权限",
+               "menutype": "tree",
+               "parent_id": 4,
+               "iconpath": "",
+               "path": "",
+               "childrens": [
+                  {
+                     "_id": 10,
+                     "user_id": 1,
+                     "menuname": "页面权限",
+                     "menutype": "node",
+                     "parent_id": 9,
+                     "iconpath": "",
+                     "path": "",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 11,
+                     "user_id": 1,
+                     "menuname": "按钮权限",
+                     "menutype": "node",
+                     "parent_id": 9,
+                     "iconpath": "",
+                     "path": "",
+                     "childrens": []
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "_id": 12,
+         "user_id": 1,
+         "menuname": "功能",
+         "menutype": "tree",
+         "parent_id": -1,
+         "iconpath": "gongneng",
+         "path": "w1",
+         "childrens": [
+            {
+               "_id": 13,
+               "user_id": 1,
+               "menuname": "图标",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "w2",
+               "childrens": []
+            },
+            {
+               "_id": 14,
+               "user_id": 1,
+               "menuname": "截图",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "w3",
+               "childrens": []
+            }
+         ]
+      },
+      {
+         "_id": 5555,
+         "user_id": 1,
+         "menuname": "功能",
+         "menutype": "tree",
+         "parent_id": -1,
+         "iconpath": "gongneng",
+         "path": "15",
+         "childrens": [
+            {
+               "_id": 111,
+               "user_id": 1,
+               "menuname": "图标",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "w2",
+               "childrens": []
+            },
+            {
+               "_id": 222,
+               "user_id": 1,
+               "menuname": "截图",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "w3",
+               "childrens": []
+            }
+         ]
+      }
+   ]
+}

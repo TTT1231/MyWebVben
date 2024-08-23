@@ -1,5 +1,3 @@
-import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -14,6 +12,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 //mock服务
 import {viteMockServe} from 'vite-plugin-mock'
+import path from 'node:path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -29,23 +28,24 @@ export default defineConfig({
       ],
     }),
     viteMockServe({
-      mockPath:'./src/assets/mock',
+      mockPath:'./src/mock',
       enable:true,
     })
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      // '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@':path.resolve(__dirname,'./src'),
     }
   },
   server:{
-    proxy: {
-      '/api': {
-        target: 'https://localhost:3000',
-        // changeOrigin: true,
-        // // only https
-        // secure: false,
-      }
-    }
+    // proxy: {
+    //   '/base-url': {
+    //     target: 'https://localhost:3000',
+    //     // changeOrigin: true,
+    //     // // only https
+    //     // secure: false,
+    //   }
+    // }
   }
 })
