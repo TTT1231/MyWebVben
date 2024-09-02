@@ -136,7 +136,7 @@ const UserModule: Module<UserState, any> = {
          const tokenState: RealToken = getters['getUserToken'];
          if (tokenState === null || tokenState === undefined) {
             try {
-               let data = await LoginRequestApi<JsonUserState, RequestUserInfo>(payload).then(
+               const data = await LoginRequestApi<JsonUserState, RequestUserInfo>(payload).then(
                   (rawData) => rawData.data
                );
 
@@ -159,7 +159,7 @@ const UserModule: Module<UserState, any> = {
                persistent.cleanSessionOfKey(tokenState.token);
                persistent.cleanSessionOfKey(User_Info_Key);
                try {
-                  let data = await LoginRequestApi<JsonUserState, RequestUserInfo>(payload).then(
+                  const data = await LoginRequestApi<JsonUserState, RequestUserInfo>(payload).then(
                      (rawData) => rawData.data
                   );
                   if (data.status === HttpResponseStatus.SUCCESS) {
@@ -178,8 +178,10 @@ const UserModule: Module<UserState, any> = {
          }
       },
       /**退出登录，清除所有session会话存储 */
-      loginOut() {
+      loginOut({ commit }) {
          persistent.cleanSessionAll();
+         commit('setUserInfo', null);
+         commit('setUserToken', '');
          router.replace('/');
       }
    }

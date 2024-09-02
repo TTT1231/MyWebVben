@@ -1,9 +1,22 @@
 <template>
-   <div class="h-full hover-pointer-color flex items-center w-8 justify-center">
-      <img :src="reactiableImagePath" class="h-1/2" />
+   <div
+      class="h-full hover-pointer-color flex items-center w-8 justify-center"
+      @click="handleTranslation"
+   >
+      <a-tooltip placement="bottom">
+         <template #title>
+            <span>翻译</span>
+         </template>
+         <img :src="reactiableImagePath" class="h-1/2" />
+      </a-tooltip>
    </div>
 </template>
 <script setup lang="ts">
 import { IMAGE_HOME } from '@/enums/imagehomepath';
+import { useMessage } from '@/hooks/useMessage';
 const reactiableImagePath = `${IMAGE_HOME}translate.png`;
+const createMessage = useMessage();
+const handleTranslation = () => {
+   createMessage('暂未实现', { type: 'error', duration: 800 });
+};
 </script>

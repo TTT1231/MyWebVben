@@ -2,6 +2,7 @@ import { createStore } from 'vuex';
 import UserModule from './modules/user';
 import PermissionModule from './modules/permission';
 import TabsModule from './modules/tabs';
+import ExcelModule from './modules/excel';
 import type { App } from 'vue';
 const store = createStore({
    state: {},
@@ -14,7 +15,8 @@ const store = createStore({
    modules: {
       UserModule,
       PermissionModule,
-      TabsModule
+      TabsModule,
+      ExcelModule
    }
 });
 export function setupStore(app: App<Element>) {

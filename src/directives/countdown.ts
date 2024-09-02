@@ -12,10 +12,10 @@ const CountDown: Directive<any, CountDownSetting> = {
       const gaptime: number = binding.value.gaptime ? binding.value.gaptime : 30;
       const endCount: number = el.textContent;
       const totaltime: number = binding.value.totaltime ? binding.value.totaltime : 800;
-      let step = Math.floor(endCount / (totaltime / gaptime));
+      const step = Math.floor(endCount / (totaltime / gaptime));
       let start = 0;
       setTimeout(() => {
-         let timer = setInterval(() => {
+         const timer = setInterval(() => {
             start += step;
             if (start >= endCount) {
                start = endCount;

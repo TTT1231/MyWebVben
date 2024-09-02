@@ -11,14 +11,16 @@
             </el-icon>  -->
 
             <el-icon v-if="item.iconpath !== ''">
-               <img :src="formatIconPath(item.iconpath)" />
+               <img :src="formatIconPath(item.iconpath)" class="select-none" />
             </el-icon>
-            <span class="marginleft-20"> {{ item.menuname }}</span>
+            <span class="marginleft-20 select-none"> {{ item.menuname }}</span>
          </template>
          <MenuItem :treedata="item.childrens" />
       </el-sub-menu>
       <el-menu-item :index="item.path" v-if="item.menutype === 'node'">
-         <template #title> {{ item.menuname }}</template>
+         <template #title
+            ><span class="select-none"> {{ item.menuname }}</span></template
+         >
       </el-menu-item>
    </template>
 </template>
@@ -44,4 +46,3 @@ const formatIconPath = (item: string): string => {
    return item === '' ? '' : `${IMAGE_HOME}${item}.png`;
 };
 </script>
-<style scoped></style>

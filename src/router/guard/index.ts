@@ -17,7 +17,7 @@ function createPermissionRuard(router: Router) {
    //    })
    router.beforeEach(async (to, _, next) => {
       //不是登录页，且获取到了token,同时引入主页未找到路由地址 notfound
-      if ((to.path !== '/' || to.name === 'notfound') && realToken !== undefined) {
+      if ((to.path !== '/' || to.name === 'notfound') && realToken.value !== undefined) {
          if (realToken.value?.status === HttpResponseStatus.HAVEIT || to.name === 'notfound') {
             //输入路径，更新面包屑导航以及左侧菜单currentIndex
             await store.dispatch('TabsModule/isInallTabs', to.path);

@@ -1,5 +1,5 @@
 <template>
-   <div class="h-full hover-pointer-color flex items-center w-8 justify-center">
+   <div class="h-full hover-pointer-color flex items-center w-8 justify-center select-none">
       <img :src="reactiableImagePath" class="h-1/2" />
    </div>
 </template>

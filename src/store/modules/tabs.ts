@@ -11,6 +11,61 @@ const allNavData: BreadNavRaw[] = [
       title: '工作台',
       key: '2',
       path: '/main/workbench'
+   },
+   {
+      title: '截图',
+      key: '3',
+      path: '/main/fun/shotscreen'
+   },
+   {
+      title: 'websocket测试',
+      key: '4',
+      path: '/main/fun/websocket'
+   },
+   {
+      title: '登录请求重试',
+      key: '5',
+      path: '/main/fun/requestretry'
+   },
+   {
+      title: '登录过期',
+      key: '6',
+      path: '/main/fun/loginout'
+   },
+   {
+      title: '打印',
+      key: '7',
+      path: '/main/fun/print'
+   },
+   {
+      title: '右键菜单',
+      key: '8',
+      path: '/main/fun/rightmenu'
+   },
+   {
+      title: '文件下载',
+      key: '9',
+      path: '/main/fun/download'
+   },
+   {
+      title: '图片预览',
+      key: '10',
+      path: '/main/fun/imgpreview'
+   },
+   {
+      title: '剪切板',
+      key: '11',
+      path: '/main/fun/cuttext'
+   },
+   {
+      title: '水波纹',
+      key: '12',
+      path: '/main/fun/ripple'
+   },
+   {
+      title: '全屏',
+      key: '13',
+      path: '/main/fun/fullscreen'
    }
 ];
 /**这里我们没有用session存储刷新直接清空 */
@@ -41,7 +96,7 @@ const TabsModule: Module<TabsRoot, any> = {
          });
          if (isNotHave) {
             state.currentTab.push(payload);
-            let len = state.currentTab.length - 1;
+            const len = state.currentTab.length - 1;
             state.currentTabIndex = state.currentTab[len].path;
          } else {
             //有就更新索引，没有就增加
@@ -102,7 +157,7 @@ const TabsModule: Module<TabsRoot, any> = {
          });
          if (tempitem) {
             //判断在不在currentTab里面,不在调用addTab
-            let temp: BreadNavRaw = tempitem;
+            const temp: BreadNavRaw = tempitem;
             const inCurrentTabFlag = await dispatch('isInCurrentTab', temp.path);
             if (inCurrentTabFlag) {
                commit('addTab', temp);

@@ -1,10 +1,13 @@
-import type { AuthMenus } from '@/types/menus';
+import type { AuthMenus } from '@/types/permission';
 import type { Ref } from 'vue';
+
+//权限菜单用，这里以后端返回为主，并不使用前端管理
+
 /**
  * @description 按菜单_id更新菜单名
  */
 export function updateMenusNameById(data: AuthMenus[], id: number, newValue: string): void {
-   for (let item of data) {
+   for (const item of data) {
       if (item._id === id) {
          item.menuname = newValue;
          return; // 找到并更新后直接返回
@@ -18,7 +21,7 @@ export function updateMenusNameById(data: AuthMenus[], id: number, newValue: str
  * @description 按菜单_id获取菜单名
  */
 export function getMenusNameById(data: AuthMenus[], id: number, returnvalue: Ref): void {
-   for (let item of data) {
+   for (const item of data) {
       if (item._id === id) {
          returnvalue.value = item.menuname;
          return; // 找到并更新后直接返回

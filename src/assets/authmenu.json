@@ -40,7 +40,7 @@
          "menutype": "tree",
          "parent_id": -1,
          "path": "q4",
-         "iconpath": "gongneng",
+         "iconpath": "yaoshi",
          "childrens": [
             {
                "_id": 5,
@@ -123,60 +123,180 @@
          "menutype": "tree",
          "parent_id": -1,
          "iconpath": "gongneng",
-         "path": "w1",
+         "path": "",
          "childrens": [
             {
                "_id": 13,
                "user_id": 1,
-               "menuname": "图标",
+               "menuname": "截图",
                "menutype": "node",
                "parent_id": 11,
                "iconpath": "",
-               "path": "w2",
+               "path": "/main/fun/shotscreen",
                "childrens": []
             },
             {
                "_id": 14,
                "user_id": 1,
-               "menuname": "截图",
+               "menuname": "websocket测试",
                "menutype": "node",
                "parent_id": 11,
                "iconpath": "",
-               "path": "w3",
+               "path": "/main/fun/websocket",
                "childrens": []
+            },
+            {
+               "_id": 15,
+               "user_id": 1,
+               "menuname": "测试请求重试",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/requestretry",
+               "childrens": []
+            },
+            {
+               "_id": 16,
+               "user_id": 1,
+               "menuname": "登录过期",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/loginout",
+               "childrens": []
+            },
+            {
+               "_id": 17,
+               "user_id": 1,
+               "menuname": "打印",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/print",
+               "childrens": []
+            },
+            {
+               "_id": 18,
+               "user_id": 1,
+               "menuname": "右键菜单",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/rightmenu",
+               "childrens": []
+            },
+            {
+               "_id": 19,
+               "user_id": 1,
+               "menuname": "文件下载",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/download",
+               "childrens": []
+            },
+            {
+               "_id": 20,
+               "user_id": 1,
+               "menuname": "图片预览",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/imgpreview",
+               "childrens": []
+            },
+            {
+               "_id": 21,
+               "user_id": 1,
+               "menuname": "剪切板",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/cuttext",
+               "childrens": []
+            },
+            {
+               "_id": 22,
+               "user_id": 1,
+               "menuname": "水波纹",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/ripple",
+               "childrens": []
+            },
+            {
+               "_id": 23,
+               "user_id": 1,
+               "menuname": "全屏",
+               "menutype": "node",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "/main/fun/fullscreen",
+               "childrens": []
+            },
+            {
+               "_id": 24,
+               "user_id": 1,
+               "menuname": "Excel",
+               "menutype": "tree",
+               "parent_id": 11,
+               "iconpath": "",
+               "path": "",
+               "childrens": [
+                  {
+                     "_id": 25,
+                     "user_id": 1,
+                     "menuname": "选择导出格式",
+                     "menutype": "node",
+                     "parent_id": 24,
+                     "iconpath": "",
+                     "path": "/main/fun/excel/export1",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 26,
+                     "user_id": 1,
+                     "menuname": "JSON数据导出",
+                     "menutype": "node",
+                     "parent_id": 24,
+                     "iconpath": "",
+                     "path": "/main/fun/excel/export2",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 27,
+                     "user_id": 1,
+                     "menuname": "Array数据导出",
+                     "menutype": "node",
+                     "parent_id": 24,
+                     "iconpath": "",
+                     "path": "/main/fun/excel/export3",
+                     "childrens": []
+                  },
+                  {
+                     "_id": 28,
+                     "user_id": 1,
+                     "menuname": "导入",
+                     "menutype": "node",
+                     "parent_id": 24,
+                     "iconpath": "",
+                     "path": "/main/fun/excel/import",
+                     "childrens": []
+                  }
+               ]
             }
          ]
       },
       {
-         "_id": 5555,
+         "_id": 29,
          "user_id": 1,
-         "menuname": "功能",
-         "menutype": "tree",
+         "menuname": "单元测试",
+         "menutype": "node",
          "parent_id": -1,
-         "iconpath": "gongneng",
-         "path": "15",
-         "childrens": [
-            {
-               "_id": 111,
-               "user_id": 1,
-               "menuname": "图标",
-               "menutype": "node",
-               "parent_id": 11,
-               "iconpath": "",
-               "path": "w2",
-               "childrens": []
-            },
-            {
-               "_id": 222,
-               "user_id": 1,
-               "menuname": "截图",
-               "menutype": "node",
-               "parent_id": 11,
-               "iconpath": "",
-               "path": "w3",
-               "childrens": []
-            }
-         ]
+         "iconpath": "",
+         "path": "/main/test",
+         "childrens": []
       }
    ]
 }

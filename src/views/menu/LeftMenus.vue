@@ -1,6 +1,6 @@
 <template>
    <el-scrollbar class="leftmenu-sider-bar">
-      <div class="flex flex-row hover:cursor-pointer border-1">
+      <div class="flex flex-row hover:cursor-pointer border-1 select-none">
          <img :src="logoImagePath" class="w-14 h-11" />
          <div v-if="!isCollapse" class="menutitle">My Admin CMS</div>
       </div>
@@ -16,6 +16,7 @@
    </el-scrollbar>
 </template>
 <script setup lang="ts">
+import './menus.css';
 import MenuItem from './MenuItem.vue';
 import { useStore } from 'vuex';
 import { HttpResponseStatus } from '@/enums/httprespstatus';
@@ -25,6 +26,7 @@ import { computed } from 'vue';
 import type { MenusState } from '@/types/permission';
 import { ElMessageBox } from 'element-plus';
 import { useRouter } from 'vue-router';
+import { watch } from 'vue';
 const router = useRouter();
 const logoImagePath = '/images/leftmenulogo.png';
 const store = useStore();
@@ -41,6 +43,7 @@ const props = defineProps({
    }
 });
 const currentIndex = computed(() => store.getters['TabsModule/getCurrentTabIndex']);
+const currentTabLen = computed(() => store.getters['TabsModule/getCurrentTab'].length);
 //面包屑菜单激活时的回调
 const addBreadNavItem = async (index: string) => {
    let title = await store.dispatch('TabsModule/getTitleOfKey', index);
@@ -74,17 +77,19 @@ onMounted(() => {
       });
    }
 });
+watch(
+   () => currentTabLen.value,
+   () => {
+      if (currentTabLen.value !== 0) {
+         return;
+      }
+      let currentPath = router.currentRoute.value.fullPath;
+      if (currentPath === '/main') {
+         return;
+      }
+      router.replace('/main');
+      //这里应该是dom更新之后调用
+   },
+   { immediate: true, flush: 'post' }
+);
 </script>
-<style scoped>
-.menutitle {
-   font-size: 16px;
-   color: deepskyblue;
-   font-weight: 700;
-   place-items: center;
-   transform: translateY(25%);
-}
-.leftmenu-sider-bar {
-   width: 200px;
-}
-</style>
-@/types/user

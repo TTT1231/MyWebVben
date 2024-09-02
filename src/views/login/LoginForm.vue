@@ -150,7 +150,7 @@ const handleLogin = async (formEl: FormInstance | undefined) => {
    }
 };
 const handleForgetpw = () => {
-   alert('忘记密码未实现');
+   createMessage('暂未实现', { type: 'error', duration: 800 });
 };
 const rememberpwStatue = ref(true);
 </script>

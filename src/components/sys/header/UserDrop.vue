@@ -40,6 +40,7 @@ import { IMAGE_HOME } from '@/enums/imagehomepath';
 import { Modal } from 'ant-design-vue';
 import { useStore } from 'vuex';
 import { createVNode } from 'vue';
+import { useMessage } from '@/hooks/useMessage';
 const userImgHome = `${IMAGE_HOME}eyu.png`;
 const dropImgHome = `${IMAGE_HOME}sys/header/`;
 const doc = `${dropImgHome}doc.png`;
@@ -48,8 +49,9 @@ const lock = `${dropImgHome}lock.png`;
 const close = `${dropImgHome}close.png`;
 const warn = `${IMAGE_HOME}warn.png`;
 const store = useStore();
+const createMessage = useMessage();
 const notImpl = () => {
-   alert('暂未实现');
+   createMessage('暂未实现', { type: 'error', duration: 800 });
 };
 const loginOutSys = () => {
    //退出系统时，显示警告框
