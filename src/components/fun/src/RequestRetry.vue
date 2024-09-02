@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col enter-y">
       <a-card title="请求错误重试" class="w-full"></a-card>
       <div class="w-2/5 mt-4">
          <a-card title="示例">

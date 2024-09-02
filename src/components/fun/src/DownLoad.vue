@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col enter-y">
       <a-card title="文件下载示例" class="w-full" />
       <div class="w-full flex flex-row border mt-4 bg-slate-50 h-12 items-center">
          <el-button type="primary" @click="handleFileStreamDownload">文件流下载</el-button>

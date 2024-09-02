@@ -46,6 +46,7 @@
          <el-button
             type="primary"
             class="w-full margintop-25 marginleft-5 animate-blockleftmed animate-d-10"
+            @click="handleRegister(ruleFormRef)"
             >注册</el-button
          >
       </div>
@@ -59,11 +60,13 @@
    </div>
 </template>
 <script setup lang="ts">
-import type { FormRules } from 'element-plus';
-import { reactive } from 'vue';
+import type { FormInstance, FormRules } from 'element-plus';
+import { reactive, ref } from 'vue';
 import { LoginState, useLogin } from './useLogin';
 import { computed } from 'vue';
+import { useMessage } from '@/hooks/useMessage';
 const { getCurrentState, setCurrentState } = useLogin();
+const ruleFormRef = ref<FormInstance>();
 const isShow = computed(() => {
    if (getCurrentState.value === LoginState.LoginRegister) {
       return true;
@@ -74,6 +77,7 @@ const isShow = computed(() => {
 const handleBack = () => {
    setCurrentState(LoginState.LoginDefault);
 };
+const createMessage = useMessage();
 interface RuleForm {
    account: string;
    password: string;
@@ -92,4 +96,14 @@ const rules = reactive<FormRules<RuleForm>>({
    ],
    mobile: [{ required: true, message: '手机号不能为空', trigger: 'blur' }]
 });
+
+const handleRegister = async (formEl: FormInstance | undefined) => {
+   if(!formEl){return;}
+   await formEl.validate((valid)=>{
+      if(valid){
+         createMessage('未连接后端', { type: 'error', duration: 800 });
+      }
+   })
+  
+};
 </script>

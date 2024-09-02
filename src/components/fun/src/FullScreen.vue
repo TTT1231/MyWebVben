@@ -1,5 +1,5 @@
 <template>
-   <div title="全屏模式" class="flex flex-col">
+   <div title="全屏模式" class="flex flex-col enter-y">
       <a-card title="全屏模式示例" class="w-full" />
       <a-card class="flex flex-row w-full mt-4">
          <el-button type="primary" @click="handleEnterFullScreen" :disabled="disabled"

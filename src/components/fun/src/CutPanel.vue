@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col enter-y">
       <a-card title="剪切板示例" />
       <a-card title="剪切板卡片标题示例" class="mt-4">
          <div class="w-full flex flex-row">

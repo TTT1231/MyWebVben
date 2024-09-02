@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col enter-y">
       <a-card title="打印示例" class="w-full" />
 
       <el-collapse class="mt-4">

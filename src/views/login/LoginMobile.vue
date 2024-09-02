@@ -36,6 +36,7 @@
       <el-button
          type="primary"
          class="w-full animate-blockleftmed marginleft-10 animate-d-10 margintop-20"
+         @click="handlePhoneLogin(ruleFormRef)"
          >登录</el-button
       >
       <el-button class="w-full animate-blockleftmed animate-d-10 margintop-15" @click="handleBack"
@@ -49,6 +50,7 @@ import { computed } from 'vue';
 import { unref } from 'vue';
 import { reactive, ref } from 'vue';
 import { LoginState, useLogin } from './useLogin';
+import { useMessage } from '@/hooks/useMessage';
 const { getCurrentState, setCurrentState } = useLogin();
 const isShow = computed(() => {
    if (getCurrentState.value === LoginState.LoginMobile) {
@@ -102,4 +104,14 @@ const countdownHandle = () => {
       }
    }, 1000);
 };
+const createMessage=useMessage();
+const handlePhoneLogin=async (formEl: FormInstance | undefined)=>{
+   if(!formEl){return;}
+   await formEl.validate((valid)=>{
+      if(valid){
+         createMessage('后端未连接',{type:'error',duration:800})
+      }
+   })
+
+}
 </script>

@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col enter-y">
       <a-card title="websocket测试" class="w-full"> </a-card>
       <div class="flex flex-row mt-8">
          <a-card class="w-3/5">

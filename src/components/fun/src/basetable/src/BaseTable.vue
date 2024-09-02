@@ -16,16 +16,6 @@ import type { PaginationProps } from 'ant-design-vue';
 import type { TableType } from '@/types/fun/excel';
 import { useStore } from 'vuex';
 const store = useStore();
-// const props=defineProps({
-//     filename:{
-//         type:String,
-//         default:''
-//     },
-//     mime:{
-//         type:String,
-//         default:'',
-//     }
-// })
 
 const dataSource: Array<TableType> = [];
 
@@ -96,7 +86,7 @@ for (let a = 0; a < 80; a++) {
 }
 
 const pagination: PaginationProps = {
-   defaultPageSize: 30,
+   defaultPageSize: 10,
    total: dataSource.length,
    pageSizeOptions: ['10', '20', '30', '40', '50', '60'],
    showSizeChanger: true,
@@ -111,7 +101,7 @@ const pagination: PaginationProps = {
 
 store.commit('ExcelModule/setHeader', header);
 store.commit('ExcelModule/setData', dataSource);
-console.log(header);
+
 // watch(()=>props,()=>{
 //     if(props.isstart===false){return;}
 //     initUnionProcedure({

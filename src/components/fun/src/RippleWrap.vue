@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col enter-y">
       <a-card title="ripple示例(指令式)" class="w-full" />
       <div
          class="w-52 h-52 bg-blue-400 text-white text-center flex content-center justify-center select-none"

@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-row">
+   <div class="flex flex-row enter-y">
       <div class="border h-125">
          <a-upload action="/upload/success" @change="handleChange" listType="picture">
             <div

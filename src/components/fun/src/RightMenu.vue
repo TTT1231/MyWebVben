@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col enter-y">
       <a-card title="右键菜单示例" class="w-full"></a-card>
       <el-collapse class="mt-4">
          <el-collapse-item title="单右键菜单" name="1">

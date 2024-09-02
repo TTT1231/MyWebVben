@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col">
+   <div class="flex flex-col enter-y">
       <a-card title="截图示例" class="w-full">
          <div class="flex flex-row">
             <el-button type="primary" @click="handleShotScreen">截取当前body</el-button>

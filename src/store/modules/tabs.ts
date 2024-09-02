@@ -66,6 +66,11 @@ const allNavData: BreadNavRaw[] = [
       title: '全屏',
       key: '13',
       path: '/main/fun/fullscreen'
+   },
+   {
+      title: '选择导出格式',
+      key: '14',
+      path: '/main/fun/excel/export1'
    }
 ];
 /**这里我们没有用session存储刷新直接清空 */
