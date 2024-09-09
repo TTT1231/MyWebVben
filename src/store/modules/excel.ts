@@ -3,6 +3,10 @@ import type { Module } from 'vuex';
 import { validMime } from '@/enums/excel';
 import { useExcel } from '@/hooks/useExcel';
 import { useMessage } from '@/hooks/useMessage';
+import { headerBodyToExcelArray,exportExcel} from '@/utils/excel/xlsxUtils'
+import * as XLSX from 'xlsx';
+
+import { utils, writeFileXLSX } from 'xlsx';
 interface ExcelStateType extends WatchRuleForm {
    header: Array<{ title: string }>;
    data: Array<TableType>;
@@ -89,8 +93,11 @@ const ExcelModule: Module<ExcelStateType, any> = {
                   tableToTxt(state.header, state.data, state.filename);
                   break;
                case validMime.XLSX:
-                  state.achieve = false;
-                  createMessage('暂未实现', { type: 'error', duration: 800 });
+                  const excelArray= headerBodyToExcelArray(state.header,state.data);
+                  if(!excelArray){ createMessage('数据转化错误', { type: 'error', duration: 1000 });}
+                  else{
+                     exportExcel(excelArray,state.filename);
+                  }
                   break;
                default:
                   break;

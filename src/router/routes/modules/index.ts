@@ -142,7 +142,15 @@ const menu = {
                      meta: {
                         title: '选择导出方式'
                      }
-                  }
+                  },
+                  {
+                     path: 'import',
+                     name: 'import',
+                     component: () => import('@/components/fun/src/basetable/src/ExcelImport.vue'),
+                     meta: {
+                        title: 'Excel导入'
+                     }
+                  },
                ]
             }
          ]

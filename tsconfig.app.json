@@ -9,7 +9,8 @@
      "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "vuex":["./node_modules/vuex/types"]
     }
   }
 }
