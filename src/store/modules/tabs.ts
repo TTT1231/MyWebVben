@@ -153,7 +153,7 @@ const TabsModule: Module<TabsRoot, any> = {
          return title;
       },
       async isInallTabs({ state, dispatch, commit }, payload: string) {
-         //根据传递过来path判断在不在allTabs里面避免，解决直接输入路径不显示面包屑导航问题
+         //根据传递过来path判断在不在allTabs里面，解决直接输入路径不显示面包屑导航问题
          let tempitem: Nullable<BreadNavRaw> = null;
          state.allTab.forEach((item, index) => {
             if (item.path === payload) {

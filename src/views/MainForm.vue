@@ -1,5 +1,11 @@
 <template>
-   <div class="fixed top-0 left-0 w-full h-full">
+     
+     <el-progress v-if="isStart" className=" w-full absolute"
+        :striped="true" :striped-flow="true"
+      :percentage="rawPercentage" :show-text="true" :stroke-width="4">
+      <label></label>
+   </el-progress>
+   <div class="fixed  left-0 w-full h-full mt-1">
       <el-container>
          <el-aside :width="isCollapse ? '64px' : '200px'" class="h-screen">
             <LeftMenus :is-collapse="isCollapse" />
@@ -33,7 +39,12 @@ import CollapseIcon from '@/components/sys/header/CollapseIcon.vue';
 import HearderRight from '@/views/sys/header/HearderRight.vue';
 import GrouCard from './sys/analysis/components/GrouCard.vue';
 import BreadNav from '@/components/sys/breadnav/BreadNav.vue';
+import {useRouterLoading} from '@/hooks/useRouterLoading'
+import { onMounted } from 'vue';
+const {isStart,rawPercentage,handleChange} = useRouterLoading()
+
 const isCollapse = ref(false);
+
 const collapseImage = computed(() => {
    if (isCollapse.value === false) {
       return '/images/expand.png';
@@ -45,6 +56,9 @@ const handleCollapse = () => {
    isCollapse.value = !isCollapse.value;
    console.log(isCollapse.value);
 };
+// onMounted(()=>{
+//    handleChange();
+// })
 </script>
 <style scoped>
 .el-aside {

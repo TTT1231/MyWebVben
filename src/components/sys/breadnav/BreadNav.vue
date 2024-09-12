@@ -25,9 +25,12 @@ import { ref } from 'vue';
 import { useStore } from 'vuex';
 import { computed } from 'vue';
 import { watch } from 'vue';
-import { router } from '@/router';
 
+import { useRoute ,useRouter} from 'vue-router';
+import { sleep } from '@/utils/sleep';
 const store = useStore();
+const route=useRoute();
+const router=useRouter();
 const panes = computed(() => store.getters['TabsModule/getCurrentTab']);
 const activeKey = computed(() => store.getters['TabsModule/getCurrentTabIndex']);
 const tempkey = ref(1);
@@ -70,8 +73,12 @@ const onEdit = (targetKey: string | MouseEvent, action: string) => {
 };
 watch(
    activeKey,
-   (newValue) => {
-      router.push(newValue);
+   async (newValue) => {
+      await sleep(100);
+      if(route.path!==newValue){
+          router.push(newValue);   
+      }
+       
    },
    { immediate: true }
 );

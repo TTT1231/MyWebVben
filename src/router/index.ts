@@ -17,6 +17,7 @@ export const router = createRouter({
    //  scrollBehavior: () => ({ left: 0, top: 0 }),
 });
 function initRoutes(menu: any) {
+   console.log('初始化路由')
    router.addRoute(menu);
 }
 
